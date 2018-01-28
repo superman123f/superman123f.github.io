@@ -13,6 +13,11 @@ layout: default
             <span class="octicon octicon-calendar"></span> {{ page.date | date: "%Y/%m/%d" }}
           </span>
           {% endif %}
+          {% for cat in page.categories %}
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
+          </span>
           {% if site.leancloud.enable %}
             <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
             <span class="post-meta-divider">|</span>
@@ -20,11 +25,6 @@ layout: default
             <span class="leancloud-visitors-count"></span>
             </span>
           {% endif %}
-          {% for cat in page.categories %}
-          <span class="meta-info">
-            <span class="octicon octicon-file-directory"></span>
-            <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
-          </span>
           {% endfor %}
         </div>
       </div>
