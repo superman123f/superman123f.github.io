@@ -40,6 +40,7 @@ bundle exec jekyll serve
 </div>
 然后你可以通过127.0.0.1:4000在浏览器中访问到网页，如图2
 
+
 ![图2](/images/blog/2018-01-28-2.png)
 
 有关jekyll的具体内容参考【[资料2](http://jekyllcn.com/)】
