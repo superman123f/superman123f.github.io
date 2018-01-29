@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-29T02:14:42+00:00</updated><id>http://localhost:4000/</id><title type="html">毛毛虫_Wendy</title><subtitle>Record ideas and knowledge</subtitle><author><name>Wendy</name></author><entry><title type="html">如何利用github page快速搭建个人博客</title><link href="http://localhost:4000/2018/01/28/githubpage-and-blog/" rel="alternate" type="text/html" title="如何利用github page快速搭建个人博客" /><published>2018-01-28T00:00:00+00:00</published><updated>2018-01-28T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/28/githubpage%20and%20blog</id><content type="html" xml:base="http://localhost:4000/2018/01/28/githubpage-and-blog/">&lt;p&gt;快速搭建个人博客&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-29T02:15:39+00:00</updated><id>http://localhost:4000/</id><title type="html">毛毛虫_Wendy</title><subtitle>Record ideas and knowledge</subtitle><author><name>Wendy</name></author><entry><title type="html">如何利用github page快速搭建个人博客</title><link href="http://localhost:4000/2018/01/28/githubpage-and-blog/" rel="alternate" type="text/html" title="如何利用github page快速搭建个人博客" /><published>2018-01-28T00:00:00+00:00</published><updated>2018-01-28T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/28/githubpage%20and%20blog</id><content type="html" xml:base="http://localhost:4000/2018/01/28/githubpage-and-blog/">&lt;p&gt;快速搭建个人博客&lt;/p&gt;
 
 &lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
 &lt;p&gt;本来计划在简书或者csdn上一个博客用来记录一些读书笔记，就上知乎搜了一下哪个平台更好用，当时有大神推荐可以用github page自己搭建一个博客平台，随即我就查阅如何利用github page搭建个人博客，经过几天修改，大功告成了，下面就是我的博客地址。&lt;/p&gt;
@@ -124,27 +124,4 @@ git git push -u origin master
 &lt;p&gt;本博客外观
 基于 &lt;a href=&quot;http://dongchuan.github.io&quot;&gt;DONGChuan&lt;/a&gt; 
 和 &lt;a href=&quot;http://mazhuang.org/&quot;&gt;Zhuang Ma&lt;/a&gt;
-修改，非常感谢！&lt;/p&gt;</content><author><name>Wendy</name></author><summary type="html">快速搭建个人博客</summary></entry><entry><title type="html">摄影教训总结</title><link href="http://localhost:4000/2014/08/26/takephotos/" rel="alternate" type="text/html" title="摄影教训总结" /><published>2014-08-26T00:00:00+00:00</published><updated>2014-08-26T00:00:00+00:00</updated><id>http://localhost:4000/2014/08/26/takephotos</id><content type="html" xml:base="http://localhost:4000/2014/08/26/takephotos/">&lt;h3 id=&quot;2014-年-8-月-杭州&quot;&gt;2014 年 8 月 杭州&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;以人为主体没错，但是要有远有近，拍出来全是脸和上半身也不好。&lt;/li&gt;
-  &lt;li&gt;偶尔兼顾景色，不是所有情况下虚化背景都是加分。&lt;/li&gt;
-  &lt;li&gt;一般情况下色彩鲜艳的衣服拍出来会更好看。&lt;/li&gt;
-  &lt;li&gt;人像镜头不是万能的，大光圈容易虚焦，取景范围影响构图，这些都需要更好地考虑。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;2014-年-6-月-武汉&quot;&gt;2014 年 6 月 武汉&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;照顾好拍摄对象的心情，她开心和配合了，才容易出好片。&lt;/li&gt;
-  &lt;li&gt;如果她真的不愿意拍，就不拍了吧，否则出来基本也是废的。&lt;/li&gt;
-  &lt;li&gt;蓝天白云绿水真的很容易出好片，但是阴天加浑浊的长江边还是不要轻易挑战了。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;2014-年-3-月-武汉&quot;&gt;2014 年 3 月 武汉&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;气氛要活泼一点，不然模特摆拍容易表情僵硬。&lt;/li&gt;
-  &lt;li&gt;光圈优先在室外光线好的情况下容易过曝。&lt;/li&gt;
-  &lt;li&gt;只挑拍得最好的片发给模特看，如果没有出好片，宁愿不发。&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Wendy</name></author><summary type="html">2014 年 8 月 杭州</summary></entry></feed>
+修改，非常感谢！&lt;/p&gt;</content><author><name>Wendy</name></author><summary type="html">快速搭建个人博客</summary></entry></feed>
