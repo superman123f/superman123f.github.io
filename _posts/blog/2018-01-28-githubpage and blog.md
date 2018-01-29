@@ -5,10 +5,13 @@ categories: Blog
 description: 利用github page搭建自己的博客平台
 keywords: github page,博客
 ---
+快速搭建个人博客
+
 ## 背景
 本来计划在简书或者csdn上一个博客用来记录一些读书笔记，就上知乎搜了一下哪个平台更好用，当时有大神推荐可以用github page自己搭建一个博客平台，随即我就查阅如何利用github page搭建个人博客，经过几天修改，大功告成了，下面就是我的博客地址。
 - [x] http://mmcwendy.info 
 > 注:地址是毛毛虫_Wendy的简写，欢迎大家fork和star
+
 ## 使用github page搭建博客
 ## Github page
 github page是面向用户、组织和项目开放的公共静态页面搭建托管服务，站点可以被免费托管在 Github 上，你可以选择使用 Github Pages 默认提供的域名 github.io 或者自定义域名来发布站点，更便利地是你直接从你的GitHub存储库托管。只需编辑和推送你的blog，并且你的更改是实时的。
@@ -25,7 +28,6 @@ github page是面向用户、组织和项目开放的公共静态页面搭建托
 #### 方式 2:
 当然你也可以直接fork我的项目【[地址](https://github.com/DWJWendy/DWJWendy.github.io)】，然后将我的项目名改成你的github用户名.github.io,按照 GitHub Pages 的规定，名称为 username.github.io 的项目的 master 分支，或者其它名称的项目的 gh-pages 分支可以自动生成 GitHub Pages 页面。正常情况下，你可以在本地测试启动程序:
 
-<div>
 - 进入项目目录下:
 
 ```
@@ -36,13 +38,14 @@ cd DWJWendy.github.io
 ```
 bundle exec jekyll serve
 ```
-</div>
+
 然后你可以通过127.0.0.1:4000在浏览器中访问到网页，如图2
 
 
 ![图2](/images/blog/2018-01-28-2.png)
 
 有关jekyll的具体内容参考【[资料2](http://jekyllcn.com/)】
+
 
 #### 第二步:修改模板
 
@@ -69,6 +72,8 @@ bundle exec jekyll serve
 
 4. 增加博客阅读统计功能。
    使用的是leancloud,它是一个一站式后端云服务. 包括云存储、数据分析、用户关系、消息推送、即时通信等现代应用基础模块，因为只用存储博文阅读统计数，所以我用了数据存储模块，我的修改是直接参照这篇博客的，非常简单【[资料4](http://blog.csdn.net/u013553529/article/details/63357382)】
+
+
 #### 第三步:上传
 当你的修改完成后，你就可以进入项目下，并在终端输入相关的git命令将其上传到之前建立的仓库中
 

@@ -1,40 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-29T01:59:17+00:00</updated><id>http://localhost:4000/</id><title type="html">毛毛虫_Wendy</title><subtitle>Record ideas and knowledge</subtitle><author><name>Wendy</name></author><entry><title type="html">如何利用github page快速搭建个人博客</title><link href="http://localhost:4000/2018/01/28/githubpage-and-blog/" rel="alternate" type="text/html" title="如何利用github page快速搭建个人博客" /><published>2018-01-28T00:00:00+00:00</published><updated>2018-01-28T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/28/githubpage%20and%20blog</id><content type="html" xml:base="http://localhost:4000/2018/01/28/githubpage-and-blog/">&lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-29T02:04:34+00:00</updated><id>http://localhost:4000/</id><title type="html">毛毛虫_Wendy</title><subtitle>Record ideas and knowledge</subtitle><author><name>Wendy</name></author><entry><title type="html">如何利用github page快速搭建个人博客</title><link href="http://localhost:4000/2018/01/28/githubpage-and-blog/" rel="alternate" type="text/html" title="如何利用github page快速搭建个人博客" /><published>2018-01-28T00:00:00+00:00</published><updated>2018-01-28T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/28/githubpage%20and%20blog</id><content type="html" xml:base="http://localhost:4000/2018/01/28/githubpage-and-blog/">&lt;p&gt;快速搭建个人博客&lt;/p&gt;
+
+&lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
 &lt;p&gt;本来计划在简书或者csdn上一个博客用来记录一些读书笔记，就上知乎搜了一下哪个平台更好用，当时有大神推荐可以用github page自己搭建一个博客平台，随即我就查阅如何利用github page搭建个人博客，经过几天修改，大功告成了，下面就是我的博客地址。&lt;/p&gt;
 &lt;ul class=&quot;task-list&quot;&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;http://mmcwendy.info
     &lt;blockquote&gt;
       &lt;p&gt;注:地址是毛毛虫_Wendy的简写，欢迎大家fork和star&lt;/p&gt;
-      &lt;h2 id=&quot;使用github-page搭建博客&quot;&gt;使用github page搭建博客&lt;/h2&gt;
-      &lt;h2 id=&quot;github-page&quot;&gt;Github page&lt;/h2&gt;
-      &lt;p&gt;github page是面向用户、组织和项目开放的公共静态页面搭建托管服务，站点可以被免费托管在 Github 上，你可以选择使用 Github Pages 默认提供的域名 github.io 或者自定义域名来发布站点，更便利地是你直接从你的GitHub存储库托管。只需编辑和推送你的blog，并且你的更改是实时的。&lt;/p&gt;
-      &lt;h3 id=&quot;搭建流程&quot;&gt;搭建流程&lt;/h3&gt;
-      &lt;h4 id=&quot;第一步创建仓库&quot;&gt;第一步:创建仓库&lt;/h4&gt;
-      &lt;p&gt;在创建仓库之前，默认你有github账号以及会基础的git命令能够上传代码，如果不会，请参考廖雪峰git教程【&lt;a href=&quot;https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&quot;&gt;资料1&lt;/a&gt;】。&lt;/p&gt;
-      &lt;h4 id=&quot;方式-1&quot;&gt;方式 1:&lt;/h4&gt;
-      &lt;p&gt;你只需要登录GitHub并创建一个名为username .github.io 的新存储库 ，其中username是GitHub上的用户名（如图1）。
-&lt;strong&gt;注意：如果存储库的第一部分不完全符合你的用户名，则不起作用，因此请确保正确无误。&lt;/strong&gt;
-&lt;img src=&quot;/images/blog/2018-01-28-1.png&quot; alt=&quot;图1&quot; /&gt;&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;使用github-page搭建博客&quot;&gt;使用github page搭建博客&lt;/h2&gt;
+&lt;h2 id=&quot;github-page&quot;&gt;Github page&lt;/h2&gt;
+&lt;p&gt;github page是面向用户、组织和项目开放的公共静态页面搭建托管服务，站点可以被免费托管在 Github 上，你可以选择使用 Github Pages 默认提供的域名 github.io 或者自定义域名来发布站点，更便利地是你直接从你的GitHub存储库托管。只需编辑和推送你的blog，并且你的更改是实时的。&lt;/p&gt;
+&lt;h3 id=&quot;搭建流程&quot;&gt;搭建流程&lt;/h3&gt;
+&lt;h4 id=&quot;第一步创建仓库&quot;&gt;第一步:创建仓库&lt;/h4&gt;
+&lt;p&gt;在创建仓库之前，默认你有github账号以及会基础的git命令能够上传代码，如果不会，请参考廖雪峰git教程【&lt;a href=&quot;https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&quot;&gt;资料1&lt;/a&gt;】。&lt;/p&gt;
+&lt;h4 id=&quot;方式-1&quot;&gt;方式 1:&lt;/h4&gt;
+&lt;p&gt;你只需要登录GitHub并创建一个名为username .github.io 的新存储库 ，其中username是GitHub上的用户名（如图1）。
+&lt;strong&gt;注意：如果存储库的第一部分不完全符合你的用户名，则不起作用，因此请确保正确无误。&lt;/strong&gt;
+&lt;img src=&quot;/images/blog/2018-01-28-1.png&quot; alt=&quot;图1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;然后你可以参考许多模板【参考模板&lt;a href=&quot;http://jekyllthemes.org&quot;&gt;素材1&lt;/a&gt;，&lt;a href=&quot;https://hexo.io/themes/&quot;&gt;素材2&lt;/a&gt;】，基于模板进行修改，打造属于自己风格的网站，我这个人比较看颜值，单选模板都选了一天，真心累。&lt;/p&gt;
 
 &lt;h4 id=&quot;方式-2&quot;&gt;方式 2:&lt;/h4&gt;
 &lt;p&gt;当然你也可以直接fork我的项目【&lt;a href=&quot;https://github.com/DWJWendy/DWJWendy.github.io&quot;&gt;地址&lt;/a&gt;】，然后将我的项目名改成你的github用户名.github.io,按照 GitHub Pages 的规定，名称为 username.github.io 的项目的 master 分支，或者其它名称的项目的 gh-pages 分支可以自动生成 GitHub Pages 页面。正常情况下，你可以在本地测试启动程序:&lt;/p&gt;
 
-&lt;div&gt;
-- 进入项目目录下:
+&lt;ul&gt;
+  &lt;li&gt;进入项目目录下:&lt;/li&gt;
+&lt;/ul&gt;
 
-```
-cd DWJWendy.github.io
-```
-- 启动:
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd DWJWendy.github.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;启动:&lt;/li&gt;
+&lt;/ul&gt;
 
-```
-bundle exec jekyll serve
-```
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;然后你可以通过127.0.0.1:4000在浏览器中访问到网页，如图2&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/blog/2018-01-28-2.png&quot; alt=&quot;图2&quot; /&gt;&lt;/p&gt;
@@ -73,10 +77,11 @@ bundle exec jekyll serve
   &lt;li&gt;
     &lt;p&gt;增加博客阅读统计功能。
 使用的是leancloud,它是一个一站式后端云服务. 包括云存储、数据分析、用户关系、消息推送、即时通信等现代应用基础模块，因为只用存储博文阅读统计数，所以我用了数据存储模块，我的修改是直接参照这篇博客的，非常简单【&lt;a href=&quot;http://blog.csdn.net/u013553529/article/details/63357382&quot;&gt;资料4&lt;/a&gt;】&lt;/p&gt;
-    &lt;h4 id=&quot;第三步上传&quot;&gt;第三步:上传&lt;/h4&gt;
-    &lt;p&gt;当你的修改完成后，你就可以进入项目下，并在终端输入相关的git命令将其上传到之前建立的仓库中&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h4 id=&quot;第三步上传&quot;&gt;第三步:上传&lt;/h4&gt;
+&lt;p&gt;当你的修改完成后，你就可以进入项目下，并在终端输入相关的git命令将其上传到之前建立的仓库中&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#进入项目目录
 cd DWJWendy.github.io
@@ -119,7 +124,7 @@ git git push -u origin master
 &lt;p&gt;本博客外观
 基于 &lt;a href=&quot;http://dongchuan.github.io&quot;&gt;DONGChuan&lt;/a&gt; 
 和 &lt;a href=&quot;http://mazhuang.org/&quot;&gt;Zhuang Ma&lt;/a&gt;
-修改，非常感谢！&lt;/p&gt;</content><author><name>Wendy</name></author><summary type="html">背景 本来计划在简书或者csdn上一个博客用来记录一些读书笔记，就上知乎搜了一下哪个平台更好用，当时有大神推荐可以用github page自己搭建一个博客平台，随即我就查阅如何利用github page搭建个人博客，经过几天修改，大功告成了，下面就是我的博客地址。 http://mmcwendy.info 注:地址是毛毛虫_Wendy的简写，欢迎大家fork和star 使用github page搭建博客 Github page github page是面向用户、组织和项目开放的公共静态页面搭建托管服务，站点可以被免费托管在 Github 上，你可以选择使用 Github Pages 默认提供的域名 github.io 或者自定义域名来发布站点，更便利地是你直接从你的GitHub存储库托管。只需编辑和推送你的blog，并且你的更改是实时的。 搭建流程 第一步:创建仓库 在创建仓库之前，默认你有github账号以及会基础的git命令能够上传代码，如果不会，请参考廖雪峰git教程【资料1】。 方式 1: 你只需要登录GitHub并创建一个名为username .github.io 的新存储库 ，其中username是GitHub上的用户名（如图1）。 注意：如果存储库的第一部分不完全符合你的用户名，则不起作用，因此请确保正确无误。</summary></entry><entry><title type="html">摄影教训总结</title><link href="http://localhost:4000/2014/08/26/takephotos/" rel="alternate" type="text/html" title="摄影教训总结" /><published>2014-08-26T00:00:00+00:00</published><updated>2014-08-26T00:00:00+00:00</updated><id>http://localhost:4000/2014/08/26/takephotos</id><content type="html" xml:base="http://localhost:4000/2014/08/26/takephotos/">&lt;h3 id=&quot;2014-年-8-月-杭州&quot;&gt;2014 年 8 月 杭州&lt;/h3&gt;
+修改，非常感谢！&lt;/p&gt;</content><author><name>Wendy</name></author><summary type="html">快速搭建个人博客</summary></entry><entry><title type="html">摄影教训总结</title><link href="http://localhost:4000/2014/08/26/takephotos/" rel="alternate" type="text/html" title="摄影教训总结" /><published>2014-08-26T00:00:00+00:00</published><updated>2014-08-26T00:00:00+00:00</updated><id>http://localhost:4000/2014/08/26/takephotos</id><content type="html" xml:base="http://localhost:4000/2014/08/26/takephotos/">&lt;h3 id=&quot;2014-年-8-月-杭州&quot;&gt;2014 年 8 月 杭州&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;以人为主体没错，但是要有远有近，拍出来全是脸和上半身也不好。&lt;/li&gt;
