@@ -10,6 +10,7 @@ keywords: github page,博客
 ## 背景
 本来计划在简书或者csdn上一个博客用来记录一些读书笔记，就上知乎搜了一下哪个平台更好用，当时有大神推荐可以用github page自己搭建一个博客平台，随即我就查阅如何利用github page搭建个人博客，经过几天修改，大功告成了，下面就是我的博客地址。
 - [x] http://mmcwendy.info 
+
 **注:地址是毛毛虫_Wendy的简写，欢迎大家fork和star**
 
 ## 使用github page搭建博客
@@ -21,6 +22,7 @@ github page是面向用户、组织和项目开放的公共静态页面搭建托
 #### 方式 1:
 你只需要登录GitHub并创建一个名为username .github.io 的新存储库 ，其中username是GitHub上的用户名（如图1）。
 **注意：如果存储库的第一部分不完全符合你的用户名，则不起作用，因此请确保正确无误。**
+
 ![图1](/images/blog/2018-01-28-1.png)
 
 然后你可以参考许多模板【参考模板[素材1](http://jekyllthemes.org)，[素材2](https://hexo.io/themes/)】，基于模板进行修改，打造属于自己风格的网站，我这个人比较看颜值，单选模板都选了一天，真心累。

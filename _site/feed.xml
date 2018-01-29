@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-29T02:10:30+00:00</updated><id>http://localhost:4000/</id><title type="html">毛毛虫_Wendy</title><subtitle>Record ideas and knowledge</subtitle><author><name>Wendy</name></author><entry><title type="html">如何利用github page快速搭建个人博客</title><link href="http://localhost:4000/2018/01/28/githubpage-and-blog/" rel="alternate" type="text/html" title="如何利用github page快速搭建个人博客" /><published>2018-01-28T00:00:00+00:00</published><updated>2018-01-28T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/28/githubpage%20and%20blog</id><content type="html" xml:base="http://localhost:4000/2018/01/28/githubpage-and-blog/">&lt;p&gt;快速搭建个人博客&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-29T02:14:42+00:00</updated><id>http://localhost:4000/</id><title type="html">毛毛虫_Wendy</title><subtitle>Record ideas and knowledge</subtitle><author><name>Wendy</name></author><entry><title type="html">如何利用github page快速搭建个人博客</title><link href="http://localhost:4000/2018/01/28/githubpage-and-blog/" rel="alternate" type="text/html" title="如何利用github page快速搭建个人博客" /><published>2018-01-28T00:00:00+00:00</published><updated>2018-01-28T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/28/githubpage%20and%20blog</id><content type="html" xml:base="http://localhost:4000/2018/01/28/githubpage-and-blog/">&lt;p&gt;快速搭建个人博客&lt;/p&gt;
 
 &lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
 &lt;p&gt;本来计划在简书或者csdn上一个博客用来记录一些读书笔记，就上知乎搜了一下哪个平台更好用，当时有大神推荐可以用github page自己搭建一个博客平台，随即我就查阅如何利用github page搭建个人博客，经过几天修改，大功告成了，下面就是我的博客地址。&lt;/p&gt;
 &lt;ul class=&quot;task-list&quot;&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;http://mmcwendy.info 
-&lt;strong&gt;注:地址是毛毛虫_Wendy的简写，欢迎大家fork和star&lt;/strong&gt;&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;http://mmcwendy.info&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;注:地址是毛毛虫_Wendy的简写，欢迎大家fork和star&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;使用github-page搭建博客&quot;&gt;使用github page搭建博客&lt;/h2&gt;
 &lt;h2 id=&quot;github-page&quot;&gt;Github page&lt;/h2&gt;
@@ -15,8 +16,9 @@
 &lt;p&gt;在创建仓库之前，默认你有github账号以及会基础的git命令能够上传代码，如果不会，请参考廖雪峰git教程【&lt;a href=&quot;https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&quot;&gt;资料1&lt;/a&gt;】。&lt;/p&gt;
 &lt;h4 id=&quot;方式-1&quot;&gt;方式 1:&lt;/h4&gt;
 &lt;p&gt;你只需要登录GitHub并创建一个名为username .github.io 的新存储库 ，其中username是GitHub上的用户名（如图1）。
-&lt;strong&gt;注意：如果存储库的第一部分不完全符合你的用户名，则不起作用，因此请确保正确无误。&lt;/strong&gt;
-&lt;img src=&quot;/images/blog/2018-01-28-1.png&quot; alt=&quot;图1&quot; /&gt;&lt;/p&gt;
+&lt;strong&gt;注意：如果存储库的第一部分不完全符合你的用户名，则不起作用，因此请确保正确无误。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2018-01-28-1.png&quot; alt=&quot;图1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;然后你可以参考许多模板【参考模板&lt;a href=&quot;http://jekyllthemes.org&quot;&gt;素材1&lt;/a&gt;，&lt;a href=&quot;https://hexo.io/themes/&quot;&gt;素材2&lt;/a&gt;】，基于模板进行修改，打造属于自己风格的网站，我这个人比较看颜值，单选模板都选了一天，真心累。&lt;/p&gt;
 
