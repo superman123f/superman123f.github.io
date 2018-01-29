@@ -63,15 +63,9 @@
     } ,
   
     {
-      "title"    : "",
-      "category" : "",
-      "url"      : "http://localhost:4000/2018/01/28/2018-01-28-github-page/"
-    } ,
-  
-    {
-      "title"    : "",
-      "category" : "",
-      "url"      : "http://localhost:4000/2018/01/28/2018-01-28-github-page/"
+      "title"    : "如何利用github page快速搭建个人博客",
+      "category" : "Blog",
+      "url"      : "http://localhost:4000/2018/01/28/githubpage-and-blog/"
     } ,
   
     {
