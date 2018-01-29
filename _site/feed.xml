@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-29T02:04:34+00:00</updated><id>http://localhost:4000/</id><title type="html">毛毛虫_Wendy</title><subtitle>Record ideas and knowledge</subtitle><author><name>Wendy</name></author><entry><title type="html">如何利用github page快速搭建个人博客</title><link href="http://localhost:4000/2018/01/28/githubpage-and-blog/" rel="alternate" type="text/html" title="如何利用github page快速搭建个人博客" /><published>2018-01-28T00:00:00+00:00</published><updated>2018-01-28T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/28/githubpage%20and%20blog</id><content type="html" xml:base="http://localhost:4000/2018/01/28/githubpage-and-blog/">&lt;p&gt;快速搭建个人博客&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-29T02:10:30+00:00</updated><id>http://localhost:4000/</id><title type="html">毛毛虫_Wendy</title><subtitle>Record ideas and knowledge</subtitle><author><name>Wendy</name></author><entry><title type="html">如何利用github page快速搭建个人博客</title><link href="http://localhost:4000/2018/01/28/githubpage-and-blog/" rel="alternate" type="text/html" title="如何利用github page快速搭建个人博客" /><published>2018-01-28T00:00:00+00:00</published><updated>2018-01-28T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/28/githubpage%20and%20blog</id><content type="html" xml:base="http://localhost:4000/2018/01/28/githubpage-and-blog/">&lt;p&gt;快速搭建个人博客&lt;/p&gt;
 
 &lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
 &lt;p&gt;本来计划在简书或者csdn上一个博客用来记录一些读书笔记，就上知乎搜了一下哪个平台更好用，当时有大神推荐可以用github page自己搭建一个博客平台，随即我就查阅如何利用github page搭建个人博客，经过几天修改，大功告成了，下面就是我的博客地址。&lt;/p&gt;
 &lt;ul class=&quot;task-list&quot;&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;http://mmcwendy.info
-    &lt;blockquote&gt;
-      &lt;p&gt;注:地址是毛毛虫_Wendy的简写，欢迎大家fork和star&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;http://mmcwendy.info 
+&lt;strong&gt;注:地址是毛毛虫_Wendy的简写，欢迎大家fork和star&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;使用github-page搭建博客&quot;&gt;使用github page搭建博客&lt;/h2&gt;
@@ -55,7 +52,8 @@
 
     &lt;p&gt;&lt;strong&gt;评论模块：&lt;/strong&gt; 目前支持 disqus、gitment 和 gitalk，选用其中一种就可以了，推荐使用 gitment。它们各自的配置指南链接在 _config.yml 文件的 Comments 一节里都贴出来了，搭建过程【&lt;a href=&quot;https://imsun.net/posts/gitment-introduction/&quot;&gt;资料3&lt;/a&gt;】&lt;/p&gt;
 
-    &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 如果使用 disqus，因为 disqus 处理用户名与域名白名单的策略存在缺陷，请一定将 disqus.username 修改成你自己的，否则请将该字段留空。&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 如果使用 disqus，因为 disqus 处理用户名与域名白名单的策略存在缺陷，请一定将 disqus.username 修改成你自己的，否则请将该字段留空。
+&lt;img src=&quot;/images/blog/2018-01-28-5.png&quot; alt=&quot;图3&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;删除我的文章与图片。&lt;/p&gt;
@@ -95,7 +93,7 @@ git git push -u origin master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;然后你就可以在浏览器输入你的域名就可以访问你的博客，博客建立好你只需要自己写博客，然后按照上述方式传到github上，你新的博文既可以被别人访问了，如图3我的博客。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/blog/2018-01-28-4.png&quot; alt=&quot;图3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blog/2018-01-28-4.png&quot; alt=&quot;图4&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;域名&quot;&gt;域名&lt;/h2&gt;
 &lt;p&gt;说说我在这里踩的坑吧:我忘记&lt;strong&gt;域名需要解析&lt;/strong&gt;，哈哈哈真是超级搞笑……&lt;/p&gt;
@@ -104,7 +102,7 @@ git git push -u origin master
 
 &lt;p&gt;再说域名解析，虽然曾经在计算机网络的课程上知道这个名词，但还真是第一次解析，我就直接找了资源【&lt;a href=&quot;https://www.zhihu.com/question/31377141&quot;&gt;资料5&lt;/a&gt;】，按照教程来还是非常简单的，这个是我的域名解析图3&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/blog/2018-01-28-3.png&quot; alt=&quot;图4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blog/2018-01-28-3.png&quot; alt=&quot;图5&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;注意事项&quot;&gt;注意事项&lt;/h2&gt;
 

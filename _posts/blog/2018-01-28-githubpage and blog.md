@@ -10,7 +10,7 @@ keywords: github page,博客
 ## 背景
 本来计划在简书或者csdn上一个博客用来记录一些读书笔记，就上知乎搜了一下哪个平台更好用，当时有大神推荐可以用github page自己搭建一个博客平台，随即我就查阅如何利用github page搭建个人博客，经过几天修改，大功告成了，下面就是我的博客地址。
 - [x] http://mmcwendy.info 
-> 注:地址是毛毛虫_Wendy的简写，欢迎大家fork和star
+**注:地址是毛毛虫_Wendy的简写，欢迎大家fork和star**
 
 ## 使用github page搭建博客
 ## Github page
@@ -56,6 +56,7 @@ bundle exec jekyll serve
    **评论模块：** 目前支持 disqus、gitment 和 gitalk，选用其中一种就可以了，推荐使用 gitment。它们各自的配置指南链接在 \_config.yml 文件的 Comments 一节里都贴出来了，搭建过程【[资料3](https://imsun.net/posts/gitment-introduction/)】
 
    **注意：** 如果使用 disqus，因为 disqus 处理用户名与域名白名单的策略存在缺陷，请一定将 disqus.username 修改成你自己的，否则请将该字段留空。
+![图3](/images/blog/2018-01-28-5.png)
   
 2. 删除我的文章与图片。
 
@@ -90,7 +91,7 @@ git git push -u origin master
 ```
 然后你就可以在浏览器输入你的域名就可以访问你的博客，博客建立好你只需要自己写博客，然后按照上述方式传到github上，你新的博文既可以被别人访问了，如图3我的博客。
 
-![图3](/images/blog/2018-01-28-4.png)
+![图4](/images/blog/2018-01-28-4.png)
 
 ## 域名
 说说我在这里踩的坑吧:我忘记**域名需要解析**，哈哈哈真是超级搞笑……
@@ -99,7 +100,7 @@ git git push -u origin master
 
 再说域名解析，虽然曾经在计算机网络的课程上知道这个名词，但还真是第一次解析，我就直接找了资源【[资料5](https://www.zhihu.com/question/31377141)】，按照教程来还是非常简单的，这个是我的域名解析图3
 
-![图4](/images/blog/2018-01-28-3.png)
+![图5](/images/blog/2018-01-28-3.png)
 
 ## 注意事项
 
