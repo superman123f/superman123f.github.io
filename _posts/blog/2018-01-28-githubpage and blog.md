@@ -2,7 +2,7 @@
 layout: post
 title: 如何利用github page快速搭建个人博客
 categories: Blog
-description: 利用github page搭建自己的博客平台
+description: 利用github page快速搭建个人博客
 keywords: github page,博客
 ---
 快速搭建个人博客

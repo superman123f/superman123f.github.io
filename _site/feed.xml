@@ -1,4 +1,156 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-29T02:15:39+00:00</updated><id>http://localhost:4000/</id><title type="html">毛毛虫_Wendy</title><subtitle>Record ideas and knowledge</subtitle><author><name>Wendy</name></author><entry><title type="html">如何利用github page快速搭建个人博客</title><link href="http://localhost:4000/2018/01/28/githubpage-and-blog/" rel="alternate" type="text/html" title="如何利用github page快速搭建个人博客" /><published>2018-01-28T00:00:00+00:00</published><updated>2018-01-28T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/28/githubpage%20and%20blog</id><content type="html" xml:base="http://localhost:4000/2018/01/28/githubpage-and-blog/">&lt;p&gt;快速搭建个人博客&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-30T13:24:11+00:00</updated><id>http://localhost:4000/</id><title type="html">毛毛虫_Wendy</title><subtitle>Record ideas and knowledge</subtitle><author><name>Wendy</name></author><entry><title type="html">新浪微博爬虫</title><link href="http://localhost:4000/2018/01/30/weibospider/" rel="alternate" type="text/html" title="新浪微博爬虫" /><published>2018-01-30T00:00:00+00:00</published><updated>2018-01-30T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/30/weibospider</id><content type="html" xml:base="http://localhost:4000/2018/01/30/weibospider/">&lt;p&gt;详解新浪微博爬取过程&lt;/p&gt;
+
+&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;因为科研需要，我从16年8月起就开始跟微博数据打交道，所以从那时开始就不得不想尽办法爬取微博数据，我爬取的内容主要是：博文、发博账号、发文时间、爬取时间、点赞数/评论数/转发数，详情如图1。经过长时间的总结和实验，我完善了切实可行的&lt;a href=&quot;https://github.com/DWJWendy/Weibo_Spider&quot;&gt;爬虫代码&lt;/a&gt;，代码被我放在github上，同样你也可以在我的个人博客open-source里面查看到weibospider项目。&lt;/p&gt;
+
+&lt;p&gt;欢迎大家fork和star我的项目,&lt;strong&gt;&lt;a href=&quot;https://github.com/DWJWendy/Weibo_Spider&quot;&gt;项目地址&lt;/a&gt;&lt;/strong&gt;，谢谢！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2018-01-30-1.png&quot; alt=&quot;图1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;环境&quot;&gt;环境&lt;/h3&gt;
+
+&lt;p&gt;linux+Python3.6+mongo&lt;/p&gt;
+
+&lt;p&gt;但是万变不离其中，更改一下便可以用于其他语言和环境。&lt;/p&gt;
+&lt;h3 id=&quot;预登陆&quot;&gt;预登陆&lt;/h3&gt;
+
+&lt;p&gt;我们都知道微博数据需要先登录才能爬取，而我们解决的办法是使用微博预登陆获得登录需要的必要参数，这一部分在/Prelogin.py 实现的。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def login_weibo(nick , pwd) :
+    #==========================获取servertime , pcid , pubkey , rsakv===========================
+    # 预登陆请求，获取到若干参数
+    prelogin_url = 'http://login.sina.com.cn/sso/prelogin.php?entry=weibo&amp;amp;callback=sinaSSOController.preloginCallBack&amp;amp;su=%s&amp;amp;rsakt=mod&amp;amp;checkpin=1&amp;amp;client=ssologin.js(v1.4.15)&amp;amp;_=1400822309846' % nick
+    preLogin = getData(prelogin_url)
+    # 下面获取的四个值都是接下来要使用的
+    servertime = re.findall('&quot;servertime&quot;:(.*?),' , preLogin.decode('utf-8'))[0]
+    pubkey = re.findall('&quot;pubkey&quot;:&quot;(.*?)&quot;,' , preLogin.decode('utf-8'))[0]
+    rsakv = re.findall('&quot;rsakv&quot;:&quot;(.*?)&quot;,' ,preLogin.decode('utf-8'))[0]
+    nonce = re.findall('&quot;nonce&quot;:&quot;(.*?)&quot;,' , preLogin.decode('utf-8'))[0]
+
+    #===============对用户名和密码加密================
+    # 好，你已经来到登陆新浪微博最难的一部分了，如果这部分没有大神出来指点一下，那就真是太难了，我也不想多说什么，反正就是各种加密，最后形成了加密后的su和sp
+    su = base64.b64encode(bytes(urllib.request.quote(nick) , encoding = 'utf-8'))
+    rsaPublickey = int(pubkey , 16)
+    key = rsa.PublicKey(rsaPublickey , 65537)
+    #稍微说一下的是在我网上搜到的文章中，有些文章里并没有对拼接起来的字符串进行bytes，这是python3的新方法好像是。rsa.encrypt需要一个字节参数，这一点和之前不一样。其实上面的base64.b64encode也一样
+    message = bytes(str(servertime) + '\t' + str(nonce) + '\n' + str(pwd) , encoding = 'utf-8')
+    sp = binascii.b2a_hex(rsa.encrypt(message , key))
+    #=======================登录=======================
+    #param就是激动人心的登陆post参数，这个参数用到了若干个上面第一步获取到的数据，可说的不多
+    param = {'entry' : 'weibo' , 'gateway' : 1 , 'from' : '' , 'savestate' : 7 , 'useticket' : 1 , 'pagerefer' : 'http://login.sina.com.cn/sso/logout.php?entry=miniblog&amp;amp;r=http%3A%2F%2Fweibo.com%2Flogout.php%3Fbackurl%3D' , 'vsnf' : 1 , 'su' : su , 'service' : 'miniblog' , 'servertime' : servertime , 'nonce' : nonce , 'pwencode' : 'rsa2' , 'rsakv' : rsakv , 'sp' : sp , 'sr' : '1680*1050' ,
+             'encoding' : 'UTF-8' , 'prelt' : 961 , 'url' : 'http://weibo.com/ajaxlogin.php?framelogin=1&amp;amp;callback=parent.sinaSSOController.feedBackUrlCallBack'}
+    # 这里就是使用postData的唯一一处，也很简单
+    s = postData('http://login.sina.com.cn/sso/login.php?client=ssologin.js(v1.4.15)' , param)
+    # 好了，当你的代码执行到这里时，已经完成了大部分了，可是有很多爬虫童鞋跟我一样还就栽在了这里，假如你跳过这里直接去执行获取粉丝的这几行代码你就会发现你获取的到还是让你登陆的页面，真郁闷啊，我就栽在这里长达一天啊
+    # 好了，我们还是继续。这个urll是登陆之后新浪返回的一段脚本中定义的一个进一步登陆的url，之前还都是获取参数和验证之类的，这一步才是真正的登陆，所以你还需要再一次把这个urll获取到并用get登陆即可
+    urll = re.findall(&quot;location.replace\(\'(.*?)\'\);&quot; , s)[0]
+    getData(urll)
+    #======================获取粉丝====================
+    # 如果你没有跳过刚才那个urll来到这里的话，那么恭喜你！你成功了，接下来就是你在新浪微博里畅爬的时候了，获取到任何你想获取到的数据了！
+    # 可以尝试着获取你自己的微博主页看看，你就会发现那是一个多大几百kb的文件了
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;但是需要注意这行代码，有时候会出现匹配不成功的问题，所以这个时候你需要打印出s检查一下问题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;urll = re.findall(&quot;location.replace\(\'(.*?)\'\);&quot; , s)[0]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;获取爬取账号的url&quot;&gt;获取爬取账号的URL&lt;/h3&gt;
+
+&lt;p&gt;这个过程你需要分析账号的规律，因为不同微博账号，可以代码规律不一样，url获取通过查看元素，查找到对应页面的地址。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2018-01-30-2.png&quot; alt=&quot;图2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;解析页码&quot;&gt;解析页码&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    def get_content(self,text):
+        mongo = MongoDB()
+        reg = '&lt;span class=&quot;nt&quot;&gt;&amp;lt;em&amp;gt;&lt;/span&gt;(\d+)&lt;span class=&quot;nt&quot;&gt;&amp;lt;/em&amp;gt;&lt;/span&gt;'
+        logger.info('解析获取网页数据...')
+        content = json.loads(text.decode(&quot;ascii&quot;))['data']
+        soup = BeautifulSoup(&quot;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&lt;/span&gt;&quot; + content + &quot;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&quot;, &quot;lxml&quot;)
+        tmp = soup.find_all(&quot;div&quot;, attrs={&quot;class&quot;: &quot;WB_detail&quot;})
+        tmp2 = soup.find_all(&quot;div&quot;, attrs={&quot;class&quot;:&quot;WB_handle&quot;})
+        if len(tmp) &amp;gt; 0 :
+            for i in range(len(tmp)):
+                item = {}
+                item[&quot;nickname&quot;] = tmp[i].find(&quot;div&quot;, attrs={&quot;class&quot;: &quot;WB_info&quot;}).find(&quot;a&quot;).get_text()
+                item[&quot;Post&quot;] = tmp[i].find(&quot;div&quot;, attrs={&quot;class&quot;: &quot;WB_text W_f14&quot;}).get_text().replace(&quot;\n&quot;, &quot;&quot;).replace(&quot; &quot;,&quot;&quot;).replace( &quot;\u200b&quot;, &quot;&quot;)
+                # -*- 爬取发布时间 -*-
+                item[&quot;Pubtime&quot;] = tmp[i].find(&quot;a&quot;, attrs={&quot;class&quot;: &quot;S_txt2&quot;}).get(&quot;title&quot;)
+                # -*- 爬取转发数 -*-
+                if re.findall(reg,str(tmp2[i].find(&quot;span&quot;, attrs={&quot;class&quot;: &quot;line S_line1&quot;,&quot;node-type&quot;:&quot;forward_btn_text&quot;})), re.S):
+                    item[&quot;Transfer_num&quot;] = int(re.findall(reg,str(tmp2[i].find(&quot;span&quot;, attrs={&quot;class&quot;: &quot;line S_line1&quot;,&quot;node-type&quot;:&quot;forward_btn_text&quot;})), re.S)[0])
+                else:
+                    item[&quot;Transfer_num&quot;] = 0
+                # -*- 爬取评论数 -*-
+                if re.findall(reg, str(tmp2[i].find(&quot;span&quot;, attrs={&quot;class&quot;: &quot;line S_line1&quot;, &quot;node-type&quot;: &quot;comment_btn_text&quot;})), re.S):
+                    item[&quot;Comment_num&quot;] = int(re.findall(reg, str(tmp2[i].find(&quot;span&quot;, attrs={&quot;class&quot;: &quot;line S_line1&quot;, &quot;node-type&quot;: &quot;comment_btn_text&quot;})), re.S)[0])
+                else:
+                    item[&quot;Comment_num&quot;] = 0
+                # -*- 爬取点赞数 -*-
+                if re.findall(reg, str(tmp2[i].find(&quot;span&quot;, attrs={&quot;node-type&quot;: &quot;like_status&quot;})), re.S):
+                    item[&quot;Like_num&quot;] = int(re.findall(reg, str(tmp2[i].find(&quot;span&quot;, attrs={&quot;node-type&quot;: &quot;like_status&quot;})), re.S)[0])
+                else:
+                    item[&quot;Like_num&quot;] = 0
+                item[&quot;Scraltime&quot;] = time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, time.localtime())
+                if mongo.process_item(item)== &quot;null&quot;:
+                    break
+                else:
+                    continue
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;定时登录设置&quot;&gt;定时登录设置&lt;/h3&gt;
+
+&lt;p&gt;这一部分是我参考别人的代码，你也可以用参考其他方式&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import sched, time
+from program.Spider import Weibo_Spider
+from program.Prelogin import getData
+from program.logfile import logger
+
+
+# 初始化sched模块的scheduler类
+# 第一个参数是一个可以返回时间戳的函数，第二个参数可以在定时未到达之前阻塞。
+schedule = sched.scheduler(time.time, time.sleep)
+
+def domain():
+    weibospider = Weibo_Spider()
+    ID_urls = weibospider.ID_urls
+    for i in range(len(ID_urls)):
+        for j in range(len(ID_urls[i])):
+            logger.info('正在爬取第'+str(i)+&quot;个账号 第&quot;+str(j+1)+&quot;条网页&quot;)
+            weibospider.get_content(text=getData(ID_urls[i][j]))
+
+def perform(inc):
+    schedule.enter(inc, 0, perform, (inc,))
+    domain()  # 需要周期执行的函数
+
+def mymain():
+    schedule.enter(0, 0, perform, (86400,))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;预览结果&quot;&gt;预览结果&lt;/h3&gt;
+
+&lt;p&gt;更改微博账号以及你自己url地址和微博账号id，然后运行/main.py文件，爬取过程如下图。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if __name__ == &quot;__main__&quot;:
+    mymain()
+    schedule.run()  # 开始运行，直到计划时间队
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2018-01-30-3.png&quot; alt=&quot;图3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tips&quot;&gt;Tips&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;微博账号可以自己去淘宝买，如果爬取的内容比较多最好多买几个换着用。&lt;/li&gt;
+  &lt;li&gt;前面也说了有时候正则匹配会出现问题，我也不知道为啥会时不时不能用，总的来说用起来没什么毛病。&lt;/li&gt;
+  &lt;li&gt;个人觉得这些代码可以scrapy框架再整理一下。&lt;/li&gt;
+  &lt;li&gt;如果大家发现还有什么毛病也欢迎联系我dengwenjun818@gmail.com。&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Wendy</name></author><summary type="html">详解新浪微博爬取过程</summary></entry><entry><title type="html">如何利用github page快速搭建个人博客</title><link href="http://localhost:4000/2018/01/28/githubpage-and-blog/" rel="alternate" type="text/html" title="如何利用github page快速搭建个人博客" /><published>2018-01-28T00:00:00+00:00</published><updated>2018-01-28T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/28/githubpage%20and%20blog</id><content type="html" xml:base="http://localhost:4000/2018/01/28/githubpage-and-blog/">&lt;p&gt;快速搭建个人博客&lt;/p&gt;
 
 &lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
 &lt;p&gt;本来计划在简书或者csdn上一个博客用来记录一些读书笔记，就上知乎搜了一下哪个平台更好用，当时有大神推荐可以用github page自己搭建一个博客平台，随即我就查阅如何利用github page搭建个人博客，经过几天修改，大功告成了，下面就是我的博客地址。&lt;/p&gt;
