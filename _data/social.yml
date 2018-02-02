@@ -22,6 +22,10 @@
 - sitename: 简书
   name: 毛毛虫_wendy
   url: https://www.jianshu.com/u/35d51c1243f7
+  
+  - sitename: csdn
+  name: 毛毛虫_Wendy
+  url: http://blog.csdn.net/dwenjun
 
 - sitename: 知乎
   name: Wendy
