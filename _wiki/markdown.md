@@ -23,7 +23,7 @@ mathjax: true
 <http://mazhuang.org>
 ```
 
-[靠谱-ing](http://mazhuang.org)  
+[靠谱-ing](http://mazhuang.org) 
 
 <http://mazhuang.org>
 
