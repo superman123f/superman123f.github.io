@@ -25,5 +25,5 @@ remarkable &
 ```
 ### 截图
 
-![figure-1](/home/dwj/Myblog/images/blog/2018-02-02-1.png  "图1")
+![figure-1](/images/blog/2018-02-02-1.png  "图1")
 
