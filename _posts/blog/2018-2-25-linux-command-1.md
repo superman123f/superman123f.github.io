@@ -1,10 +1,13 @@
 ---
 layout: post
-title: 30个Linux系统检测工具（一）
+title: 30个Linux系统监测工具（一）
 categories: Linux
 description: linux，系统监测工具
 keywords: linux，top，vmstat，w
 ---
+
+Linux 系统监测常用命令
+
 ## 前言
 使用Linux系统也有很长一段时间，很少想着去监控服务器的性能，想要写这篇博客也是源于想要通过这种方式将这些碎片的知识记录下来，且试用一下其内置的命令和一些附加的工具。
 
