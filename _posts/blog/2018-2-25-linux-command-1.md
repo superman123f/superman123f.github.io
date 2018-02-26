@@ -96,6 +96,7 @@ vmstat -a
 ---
 #### 3. w - 找出登录的用户以及他们在做什么
 w 命令显示当前在该系统上的用户及其进程，具体[参考这篇博客](http://www.linuxso.com/command/w.html) 
+
 ```
 语　　法：w [-fhlsuV][用户名称]
 

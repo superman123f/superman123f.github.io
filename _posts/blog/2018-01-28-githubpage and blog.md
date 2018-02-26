@@ -88,7 +88,7 @@ git init
 git add --all
 git commit -m "first version"
 git remote add origin git@github.com:DWJWendy/DWJWendy.github.io.git
-git git push -u origin master
+git push -u origin master
 
 ```
 然后你就可以在浏览器输入你的域名就可以访问你的博客，博客建立好你只需要自己写博客，然后按照上述方式传到github上，你新的博文既可以被别人访问了，如图3我的博客。
