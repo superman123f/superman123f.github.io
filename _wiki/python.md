@@ -61,3 +61,6 @@ JSON 编码解码器。
   ```sh
   helloworld
   ```
+
+### 去除非中文内容
+re.sub("[^\u4e00-\u9fa5]", "", word)
