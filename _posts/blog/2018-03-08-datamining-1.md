@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 数据挖掘基本概念 --《数据挖掘导论》
+title: 第一章 基本概念 --《数据挖掘导论》
 categories: Course
 description: 什么是数据挖掘、数据挖掘解决什么问题、数据挖掘的起源以及任务
 keywords: 数据挖掘（data mining）、分类、聚类、关联分析、异常监测
