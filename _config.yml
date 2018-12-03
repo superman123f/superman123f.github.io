@@ -2,10 +2,10 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://mmcwendy.info
+url: http://www.gyhisme.xin
 date_format: "ordinal"
-title: 毛毛虫_Wendy
-subtitle: "Wendy's Personal Blog"
+title: GuYuanHui's blog
+subtitle: "GYH's Personal Blog"
 description: "Record ideas and knowledge"
 keywords: Algorithm,Machine Learning(eg.Deep Learning),Data mining
 timezone: Asia/Beijing
@@ -15,12 +15,12 @@ side_bar_repo_limit: 5
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Wendy
+author: guyuanhui
 organization: UESTC
-organization_url: http://mmcwendy.info
-github_username: DWJWendy
-location: Chengdu, sichuan
-email: dengwenjun818@gmail.com
+organization_url: http://www.gyhisme.xin
+github_username: GuYuanHui
+location: GuangDong, HeYuan
+email: gyhisme@foxmail.com
 
 # ---------------- #
 #    Navigation    #
